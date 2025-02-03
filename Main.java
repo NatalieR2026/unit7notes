@@ -26,5 +26,33 @@ public class Main {
       // Use the .add( obj ) METHOD to populate/fill list
       testScores.add(40.00); // double gets wrapped into Double
       System.out.println(testScores); // prints [40.0]
+
+      // 7.2: ArrayList METHODS
+      // after "new", make call to the CONSTRUCTOR
+      ArrayList<String> toBuy = new ArrayList<String>();
+
+      // .add(obj) appends obj to END OF LIST
+      toBuy.add("apples");
+      toBuy.add("pomegranate");
+      toBuy.add("dots pretzels");
+      toBuy.add("mochi");
+      System.out.println("Shopping List: ");
+      System.out.println(toBuy);
+
+      // .size() returns int -> number of items
+      System.out.println(toBuy.size() + " things left to buy!");
+
+      // .add(int index, obj) -> "INSERT" at index
+      toBuy.add(0, "green apples");
+      System.out.println(toBuy);
+      // ALSO shifts over elements from that index on
+
+      // .get(int index) returns an object of the same type as the list holds
+      // like array[int index]
+      int lastIndex = toBuy.size() - 1;
+      String lastElemenet = toBuy.get(lastIndex);
+      System.out.println(lastElemenet);
+      System.out.println(toBuy.get(3));
+
    }
 }
