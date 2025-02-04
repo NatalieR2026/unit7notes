@@ -33,7 +33,7 @@ public class Main {
 
       // .add(obj) appends obj to END OF LIST
       toBuy.add("apples");
-      toBuy.add("pomegranate");
+      toBuy.add("pomegranate seeds");
       toBuy.add("dots pretzels");
       toBuy.add("mochi");
       System.out.println("Shopping List: ");
@@ -53,6 +53,42 @@ public class Main {
       String lastElemenet = toBuy.get(lastIndex);
       System.out.println(lastElemenet);
       System.out.println(toBuy.get(3));
+
+      // .set(int index, obj) REPLACES element at that index with the new obj
+      // returns the replaced element (same type as the list holds)
+      String replacedElement = toBuy.set(1, "face cream");
+      System.out.println(toBuy);
+      // Often, you won't need to store the return output
+      toBuy.set(2, "pomegranate"); // like calling a VOID method
+      System.out.println(toBuy);
+
+      // .remove(int index) DELETES element at that index
+      // returns the removed object (same type as the list holds)
+      String removedElement = toBuy.remove(0);
+      System.out.println(toBuy);
+      System.out.println("Moved to shopping cart: " + removedElement);
+      // ALSO shifts all remaining elements to the left (lower index)
+      // often, you won't need to actually store the removed item
+      toBuy.remove(3);
+      System.out.println(toBuy);
+
+      System.out.println("---");
+
+      // PRACTICE: Translate Array actions to ArrayList actions
+      ArrayList<String> toDoList = new ArrayList<String>();
+      toDoList.add("Do homework");
+      toDoList.add("Help make dinner");
+      toDoList.add("Call grandma");
+      System.out.println(toDoList);
+      toDoList.set(1, "Order pizza");
+      System.out.println(toDoList);
+      System.out.println(toDoList.size() + " things to do!");
+      System.out.println("First thing to do: " + toDoList.get(0));
+      toDoList.remove(0);
+      System.out.println(toDoList);
+
+
+
 
    }
 }
