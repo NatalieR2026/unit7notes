@@ -71,7 +71,7 @@ public class Main {
       // often, you won't need to actually store the removed item
       toBuy.remove(3);
       System.out.println(toBuy);
-
+      System.out.println("---");
       // 7.3 Traversing with Loops
       ArrayList<Integer> bingoNumbers = new ArrayList<Integer>();
       bingoNumbers.add(99);
@@ -88,6 +88,39 @@ public class Main {
       }
       System.out.println("Sum of bingo numbers: " + total);
       System.out.println("Product of bingo numbers: " + product);
+
+      // STANDARD FOR-LOOP (indexed)
+      int sum = 0;
+      // DIFFERENT from Arrays:
+      // 1. use ArrayList.size() instead of Array.length
+      // 2. use ArrayList.get(i) instead of Array[i]
+      for (int i=0; i < bingoNumbers.size(); i++) {
+         sum = sum + bingoNumbers.get(i);
+      }
+      System.out.println(sum);
+
+      // WHILE LOOPS (for conditionals, when you don't know exactly how many times to loop)
+      ArrayList<String> watchList = new ArrayList<String>();
+      watchList.add("Traitors");
+      watchList.add("Dexter");
+      watchList.add("You");
+      watchList.add("OBX");
+
+      // Example: search & remove
+      boolean found = false; // haven't searched yet
+      int index = 0;
+      String watchedShow = "You";
+      // loop while current index is still less than list size
+      while (index < watchList.size()) {
+         if (watchedShow.equals(watchList.get(index))) {
+            watchList.remove(index);
+            found = true;
+         }
+         else {
+            index++;
+         }
+      }
+      System.out.println(watchList);
 
 
 
